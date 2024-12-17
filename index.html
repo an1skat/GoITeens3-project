@@ -30,18 +30,24 @@
             <ul class="nav-list list">
               <li class="nav-item">
                 <a href="" class="nav-link link">
-                    Інтерактив
-                    <div class="arrow"></div>
+                  Інтерактив
+                  <div class="arrow"></div>
                 </a>
                 <ul class="dropdown list">
                   <li class="dropdown-item">
-                    <button type="button" class="dropdown-choice">Числовий</button>
+                    <button type="button" class="dropdown-choice">
+                      Числовий
+                    </button>
                   </li>
                   <li class="dropdown-item">
-                    <button type="button" class="dropdown-choice">Ігровий</button>
+                    <button type="button" class="dropdown-choice">
+                      Ігровий
+                    </button>
                   </li>
                   <li class="dropdown-item">
-                    <button type="button" class="dropdown-choice">Ознайомчий</button>
+                    <button type="button" class="dropdown-choice">
+                      Ознайомчий
+                    </button>
                   </li>
                 </ul>
               </li>
@@ -55,10 +61,14 @@
           </nav>
         </div>
         <div class="theme-container">
-            <button type="button" class="theme-btn">
-                <img class="theme-img light" src="./img/themeLight.png" alt="theme image">
-            </button>
-            <p class="welcome-text">Вітаємо, User!</p>
+          <button type="button" class="theme-btn">
+            <img
+              class="theme-img light"
+              src="./img/themeLight.png"
+              alt="theme image"
+            />
+          </button>
+          <p class="welcome-text" data-welcome-open>Вітаємо, User!</p>
         </div>
       </div>
     </header>
@@ -98,6 +108,44 @@
       <div class="container"></div>
     </footer>
 
+    <div class="welcome-modal modal" data-welcome-modal>
+      <button type="button" class="close-btn" data-welcome-close>
+        <svg width="17" height="17">
+          <use href="./img/icons.svg#icon-closebtn"></use>
+        </svg>
+      </button>
+      <h3 class="modal-title">
+        Привіт! <br />
+        Ви потрапили на сайт інтерактивних ігор та завдань <br />
+        Надіємось, що вам сподобається і ви отримаєте позитивні емоції! <br />
+        Бажаємо Вам гарно провести час!
+      </h3>
+      <form method="post" class="modal-form">
+        <div class="first-img-container">
+          <img src="./img/sword.png" alt="sword png" />
+          <img src="./img/puzzle.png" alt="puzzle png" />
+        </div>
+        <div class="form-content">
+          <label for="name" class="modal-label">
+            Введіть своє ім’я:
+            <input
+              class="modal-input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Ваше ім’я..."
+            />
+          </label>
+          <button type="submit" class="modal-submit-btn">Зберегти</button>
+        </div>
+        <div class="second-img-container">
+          <img src="./img/game-development.png" alt="game development png" />
+          <img src="./img/tic-tac-toe.png" alt="tic tac toe png" />
+        </div>
+      </form>
+    </div>
+    <!-- <div class="result-modal is-hidden"></div> -->
+    <div class="overlay" data-modal-overlay></div>
     <script src="./js/index.js"></script>
   </body>
 </html>
